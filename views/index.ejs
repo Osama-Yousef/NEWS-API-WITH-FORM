@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>search</title>
+</head>
+<body>
+<header>
+    <h1>
+        SEARCHING FORM :
+    </h1>
+</header>   
+<!-- https://newsapi.org/v2/everything?q=bitcoin&apiKey=4b8beabcfc8e4008a7e1c199be1feefb -->
+
+<!-- https://newsapi.org/v2/top-headlines?q=trump&apiKey=4b8beabcfc8e4008a7e1c199be1feefb -->
+<main>
+
+<form action="/search" method="GET" >
+
+<label for="">Search for :</label>
+<input type="text"  name="title" required>
+
+<label for="">top-headlines</label>
+<input type="radio" value="top-headlines" name="radio" required>
+
+
+<label for="">everything</label>
+<input type="radio" value="everything" name="radio" required>
+
+<input type="submit" value="search">
+
+</form>
+
+</main>
+
+
+</body>
+
+</html>

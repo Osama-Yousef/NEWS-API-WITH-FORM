@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>details</title>
+</head>
+<body>
+    <header>
+        <h1>
+            News Details :
+        </h1>
+    </header>
+<main>
+
+    <div class="allContainer">
+
+    <div class="container">
+       <h2><%=data.title%></h2> 
+       <h3><%=data.author%></h3>
+<img src="<%=data.image%>" alt="">
+<p><%=data.description%></p>
+
+<div>
+
+<button class="showdet">update this</button>
+<form action="/update/<%=data.id%>?_method=put" method="POST" class="formdet">
+
+<input type="text" name="title" value="<%=data.title%>">
+
+<input type="text" name="author" value="<%=data.author%>">
+
+<input type="text" name="image" value="<%=data.image%>">
+
+<input type="text" name="description" value="<%=data.description%>">
+
+<input type="submit" value="update">
+
+
+
+</form>
+
+
+</div>
+
+<form action="/delete/<%=data.id%>?_method=delete" method="POST" >
+
+    <button>Delete</button>
+</form>
+
+    </div>
+
+</div>
+
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../js/app.js"></script>
+
+</body>
+</html>

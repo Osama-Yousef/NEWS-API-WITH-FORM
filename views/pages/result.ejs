@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>results</title>
+</head>
+<body>
+    <header>
+        <h1>
+            Search results :
+        </h1>
+    </header>
+<main>
+
+    <div class="allContainer">
+<%data.forEach(val=>{%>
+
+    <div class="container">
+       <h2><%=val.title%></h2> 
+       <h3><%=val.author%></h3>
+<img src="<%=val.image%>" alt="">
+<p><%=val.description%></p>
+
+<div>
+
+<button class="show">select</button>
+<form action="/addToDb" method="POST" class="form">
+
+<input type="text" name="title" value="<%=val.title%>">
+
+<input type="text" name="author" value="<%=val.author%>">
+
+<input type="text" name="image" value="<%=val.image%>">
+
+<input type="text" name="description" value="<%=val.description%>">
+
+<input type="submit" value="add to favorite">
+
+
+
+</form>
+
+
+</div>
+
+
+    </div>
+
+
+    <%})%>
+
+</div>
+
+
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../js/app.js"></script>
+
+</body>
+</html>
